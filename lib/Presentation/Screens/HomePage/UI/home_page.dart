@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../../Components/app_bar.dart';
+import '../../../Declarations/constants.dart';
+import '../Widgets/a_app_bar_action.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -12,6 +16,25 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: buildAppBar(
+        appBarTitle: widget.title,
+        centerTitle: false,
+        actionWidgets: [
+          AppBarAction(icondata: Icons.notifications, appBarFun: () {}),
+          AppBarAction(icondata: Icons.person, appBarFun: () {})
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: primaryColor,
+        child: const Icon(Icons.add),
+      ),
+    );
   }
 }

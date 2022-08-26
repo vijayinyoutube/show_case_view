@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../Components/app_bar.dart';
 import '../../../Declarations/constants.dart';
 import '../Widgets/a_app_bar_action.dart';
+import '../Widgets/b_list_view.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -25,11 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
           AppBarAction(icondata: Icons.person, appBarFun: () {})
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: const [],
-        ),
-      ),
+      body: const ListViewBldr(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: primaryColor,

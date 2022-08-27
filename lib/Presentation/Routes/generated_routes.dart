@@ -4,7 +4,6 @@ import '../../Presentation/Screens/HomePage/UI/home_page.dart';
 
 class RouteGenerator {
   Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(

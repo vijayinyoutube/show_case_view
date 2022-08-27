@@ -3,7 +3,11 @@ class ListData {
   final String time;
   final String description;
 
-  ListData({required this.name, required this.time, required this.description});
+  ListData({
+    required this.name,
+    required this.time,
+    required this.description,
+  });
 }
 
 List<ListData> listData = [

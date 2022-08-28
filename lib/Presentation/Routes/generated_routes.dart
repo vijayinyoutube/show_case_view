@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:showcaseview/showcaseview.dart';
 
 import '../../Presentation/Screens/HomePage/UI/home_page.dart';
 
@@ -7,7 +8,11 @@ class RouteGenerator {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(
-            builder: (_) => const MyHomePage(title: 'Showcase view'));
+          builder: (_) => ShowCaseWidget(
+            builder: Builder(
+                builder: (context) => const MyHomePage(title: 'Showcase view')),
+          ),
+        );
 
       default:
         return _errorRoute();

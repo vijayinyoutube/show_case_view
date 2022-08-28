@@ -1,30 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../Presentation/Screens/HomePage/UI/home_page.dart';
+Color primaryColor = const Color(0xffA10035);
+Color secondaryColor = const Color(0xffFF869E);
+Color accentColor = const Color(0xffFFE7BF);
 
-class RouteGenerator {
-  Route<dynamic> generateRoute(RouteSettings settings) {
-    final args = settings.arguments;
-    switch (settings.name) {
-      case '/':
-        return MaterialPageRoute(
-            builder: (_) => const MyHomePage(title: 'Showcase view'));
+const kSpacing = 10.00;
 
-      default:
-        return _errorRoute();
-    }
-  }
+const kPadding = EdgeInsets.all(kSpacing);
+const kVPadding = EdgeInsets.symmetric(vertical: kSpacing);
+const kHPadding = EdgeInsets.symmetric(horizontal: kSpacing);
+const kSymPadding =
+    EdgeInsets.symmetric(vertical: kSpacing, horizontal: kSpacing);
 
-  static Route<dynamic> _errorRoute() {
-    return MaterialPageRoute(builder: (_) {
-      return Scaffold(
-        appBar: AppBar(
-          title: const Text('Error'),
-        ),
-        body: const Center(
-          child: Text('ERROR'),
-        ),
-      );
-    });
-  }
-}
+var kBorderRadius = BorderRadius.circular(kSpacing);

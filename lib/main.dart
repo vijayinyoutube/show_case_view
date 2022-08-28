@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Presentation/Declarations/constants.dart';
-import 'Presentation/Screens/HomePage/UI/home_page.dart';
+import 'Presentation/Routes/generated_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Showcase View',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-        initialRoute: "/",
+      initialRoute: "/",
       onGenerateRoute: RouteGenerator().generateRoute,
     );
   }
